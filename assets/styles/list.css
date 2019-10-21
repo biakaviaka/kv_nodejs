@@ -1,0 +1,26 @@
+ul {
+  padding: 0px;
+}
+
+ul li {
+  list-style-type: none;
+  line-height: 20px
+}
+
+ul li > * {
+	float: left;
+}
+
+ul li strong,
+ul li span,
+ul li form {
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  margin-right: 5px;
+}
+
+ul li form input {
+  width: 90px;
+  margin-right: 5px;
+}

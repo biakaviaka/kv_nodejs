@@ -1,0 +1,10 @@
+<h1>Title: {% title %}</h1>
+<span class="error">{% error %}</span>
+<ul>
+  {% json %}
+  <li class="clearfix"><strong>{% . %}</strong><span class="editable">{% .. %}</span> <a href="/kv/{% . %}" class="remove">remove</a></li>
+  {%end %}
+</ul>
+<form action="/kv" method="post">
+  <input type="text" name="key"> : <input type="text" name="value"><input type="submit" value="Add">
+</form>

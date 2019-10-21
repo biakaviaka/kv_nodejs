@@ -1,0 +1,13 @@
+.error {
+  color: #f44336;
+  padding:  3px 10px;
+}
+.editable {
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
