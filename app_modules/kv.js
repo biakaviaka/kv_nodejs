@@ -1,30 +1,31 @@
 module.exports = {
-  data: {
-    book: "look",
-    cool: "rool"
-  },
+  data: new Map([
+    ['book', 'look'],
+    ['cool', 'rool']
+  ]),
   update: function(key, value) {
-    if(! this.data[key]) {
+    if(! this.data.get(key)) {
       return `key: ${key} not found`
     }
 
-    this.data[key] = value
+    this.data.set(key, value)
     return "200OK"
   },
   remove: function(key) {
-    if(! this.data[key]) {
+    if(! this.data.get(key)) {
       return `key: ${key} not found`
     }
 
-    delete this.data[key]
+    this.data.delete(key)
     return "200OK"
   },
   add: function(key, value) {
-    if(this.data[key]) {
+    console.log(`${typeof(key)} ${typeof(value)}`)
+    if(this.data.get(key)) {
       return `existed key: ${key}`
     }
 
-    this.data[key] = value
+    this.data.set(key, value)
     return "200OK"
   }
 }

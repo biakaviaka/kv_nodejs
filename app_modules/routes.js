@@ -15,7 +15,7 @@ module.exports = function(router)
   })
 
   .get('/kv', (req, res) => {
-    const data = { title: "KV list", json: kv.data}
+    const data = { title: "KV list", json: helper.mapToObj(kv.data)}
 
     const block = fs.readFileSync('./views/list.html', 'utf8')
     const template = fs.readFileSync('./views/template.html', 'utf8')

@@ -9,5 +9,12 @@ module.exports = {
     });
 
     return input
+  },
+  mapToObj: function (mappedData) {
+    let obj = {}
+    for (let [k,v] of mappedData) {
+      obj[k] = v
+    }
+    return obj
   }
 }
